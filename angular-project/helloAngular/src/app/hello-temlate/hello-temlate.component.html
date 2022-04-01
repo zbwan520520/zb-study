@@ -1,0 +1,19 @@
+<div>
+  <!-- 使用双向数据绑定 -->
+  <input type="text" [(ngModel)]="text">
+  <button (click)="show01()">btn</button>
+</div>
+<div>
+  <!-- 模板变量 -->
+  <input type="text" #phone>
+  <button (click)="show02(phone.value)">btn</button>
+</div>
+<hr/>
+<!-- 安全导航符 -->
+{{people?.name}}
+
+<!-- 使用判断 -->
+<div *ngIf="people != null">
+  {{people.name}}
+</div>
+

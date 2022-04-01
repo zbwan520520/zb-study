@@ -1,0 +1,21 @@
+<input type="text"
+[(ngModel)]="user.name" name="name" required #spy>
+<p>名字：{{user.name}} - {{spy.className}}</p>
+<hr/>
+
+<input type="text" [(ngModel)]="user.name" name="name"
+       required minlength="4" #name="ngModel">
+<p>名字：{{user.name}} - {{spy.className}}</p>
+<hr/>
+<p> valid: {{name.valid}}</p>
+<p> invalid: {{name.invalid}}</p>
+<p> dirty: {{name.dirty}}</p>
+<p> touched: {{name.touched}}</p>
+<p> errors: {{name.errors | json}}</p>
+<hr/>
+
+<form (ngSubmit)="onSubmit()">
+<input type="text" [(ngModel)]="user.name" name="name"
+       required minlength="4" #name="ngModel">
+  <button type="submit" [disabled]="!name.valid">提交</button>
+</form>

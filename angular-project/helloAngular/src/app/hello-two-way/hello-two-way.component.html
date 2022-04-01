@@ -1,0 +1,9 @@
+<div>
+  <input [(ngModel)]="text"/>
+  <h3>{{text}}</h3>
+</div>
+<hr/>
+<div>
+  <input [value]="num" (input)="changeValue($event)"/>
+  <h3>{{num}}</h3>
+</div>
