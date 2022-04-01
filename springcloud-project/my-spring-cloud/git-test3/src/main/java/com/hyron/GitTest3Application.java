@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class GitTest3Application {
 
-    // git test2
+    // git test3
     public static void main(String[] args) {
         SpringApplication.run(GitTest3Application.class, args);
     }
